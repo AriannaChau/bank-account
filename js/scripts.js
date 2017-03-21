@@ -25,9 +25,15 @@ $(document).ready(function() {
 
     var newAccount = new Account(accountName, amount);
 
-    console.log(newAccount)
 
     $("ul#accounts").append("<li class='account'>" + newAccount.accountName + "</li>");
+
+    $(".account").last().click(function() {
+      console.log("hi");
+      $("output#current-balance").text("hello world");
+      // document.getElementById('current-balance').value = "Hello";
+    });
+
 
 
   });
@@ -39,5 +45,6 @@ $(document).ready(function() {
     var withdraw = parseInt($("input#withdraw").val());
 
 
-  })
+  });
+
 });
